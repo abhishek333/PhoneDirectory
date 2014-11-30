@@ -47,7 +47,7 @@ public class UserController {
 		LOG.debug("User is : ",user);
 //		model.addAttribute("userDetails",user);
 		
-		User userFound = userService.get(user);
+		User userFound = userService.findByMobileNumber(user.getMobileNumber());
 		LOG.debug("UserFound is : ",userFound);
 		System.out.println(userFound);
 		
@@ -66,7 +66,6 @@ public class UserController {
 			
 		return "login";
 	}
-	
 	
 
 }
